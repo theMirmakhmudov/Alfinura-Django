@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <p>Alfinura's Wedding Shop</p>
+            </a>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="total-cost" onclick="showSelectedProducts()">
+        <i class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;  $<span id="total-cost">0.00</span>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            {% for product in products %}
+            <div class="col-md-4 mt-2">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="card-img-actions">
+                            <img src="{{ product.image.image.url }}"
+                                class="card-img img-fluid" alt="{{ product.image.image.url }}">
+                        </div>
+                    </div>
+                    <div class="card-body bg-light text-center">
+                        <div class="mb-2">
+                            <h6 class="font-weight-semibold mb-2">
+                                <p href="#" class="text-default mb-2" data-abc="true">{{ product.name }}</p>
+                            </h6>
+                            <a href="#" class="text-muted" data-abc="true">{{ product.category }}</a>
+                        </div>
+                        <h3 class="mb-0 font-weight-semibold" data-price="{{ product.price }}">$ {{ product.price }}</h3>
+                        <div class="quantity-control mb-2" id="quantity-control-{{ product.product_id }}">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decreaseQuantity({{ product.product_id }})">-</button>
+                            <input type="text" id="quantity-{{ product.product_id }}" value="0" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="increaseQuantity({{ product.product_id }})">+</button>
+                        </div>
+                        <button type="submit" class="btn btn-outline-success" id="add-to-cart-{{ product.product_id }}"
+                            onclick="toggleCart({{ product.product_id }}, {{ product.price }})">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="selected-products" id="selected-products-section">
+        <h4>Selected Products</h4>
+        <ul id="selected-products-list">
+            <!-- Selected products will be dynamically added here -->
+        </ul>
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="hideSelectedProducts()">Close</button>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../static/script.js"></script>
+
+</body>
+
+</html>
