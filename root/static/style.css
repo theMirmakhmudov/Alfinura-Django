@@ -19,16 +19,16 @@
 
 .total-cost {
     position: fixed;
-    bottom: 20px; /* pastga masofa */
-    right: 20px; /* o'ngga masofa */
+    bottom: 20px; 
+    right: 20px; 
     background: #343a40;
     color: #fff;
-    padding: 8px 15px; /* paddingni o'zgartirdim */
+    padding: 8px 15px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     z-index: 1050;
-    font-size: 16px; /* matn o'lchamini o'zgartirdim */
+    font-size: 16px;
 }
 
 .selected-products {
@@ -44,7 +44,7 @@
     display: none;
     width: 80%;
     max-width: 600px;
-    font-size: 14px; /* matn o'lchamini o'zgartirdim */
+    font-size: 14px;
 }
 
 .selected-products ul {
@@ -58,12 +58,12 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f8f9fa;
-    font-size: 14px; /* matn o'lchamini o'zgartirdim */
+    font-size: 14px; 
 }
 
 .card-body h3 {
     color: #28a745;
-    font-size: 18px; /* matn o'lchamini o'zgartirdim */
+    font-size: 18px; 
 }
 
 
@@ -123,14 +123,14 @@
         margin: 10px 0;
     }
 
-    
-    
+
+
 }
 
 @media (max-width: 400px) {
     .total-cost {
         position: fixed;
-        bottom: 50px; 
-        right: 10px; 
+        bottom: 50px;
+        right: 10px;
     }
 }

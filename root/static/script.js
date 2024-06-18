@@ -62,7 +62,7 @@ function showSelectedProducts() {
         const quantity = parseInt(document.getElementById('quantity-' + index).value);
         if (quantity > 0) {
             const listItem = document.createElement('li');
-            listItem.classList.add('mb-3'); // Bootstrap margin
+            listItem.classList.add('mb-3');
             listItem.innerHTML = `
                 <div class="row">
                     <div class="col">${productName}</div>
@@ -73,14 +73,13 @@ function showSelectedProducts() {
         }
     });
     const selectedProductsSection = document.getElementById('selected-products-section');
-    selectedProductsSection.style.display = 'block'; // Show selected products section
-    selectedProductsSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to selected products section
+    selectedProductsSection.style.display = 'block'; 
+    selectedProductsSection.scrollIntoView({ behavior: 'smooth' });
 }
 
 function hideSelectedProducts() {
     const selectedProductsSection = document.getElementById('selected-products-section');
-    selectedProductsSection.style.display = 'none'; // Hide selected products section
+    selectedProductsSection.style.display = 'none';
 }
 
-// Initialize total cost on page load
 document.addEventListener('DOMContentLoaded', updateTotalCost);
