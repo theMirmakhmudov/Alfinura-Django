@@ -1,136 +1,160 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-.quantity-control {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    visibility: hidden;
-}
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+        }
 
-.quantity-control button {
-    width: 30px;
-    height: 30px;
-    text-align: center;
-}
+        .quantity-control button {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+        }
 
-.quantity-control input {
-    width: 50px;
-    text-align: center;
-}
+        .quantity-control input {
+            width: 50px;
+            text-align: center;
+        }
 
-.total-cost {
-    position: fixed;
-    bottom: 20px; 
-    right: 20px; 
-    background: #343a40;
-    color: #fff;
-    padding: 8px 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    z-index: 1050;
-    font-size: 16px;
-}
+        .total-cost {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #343a40;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            z-index: 1050;
+            font-size: 16px;
+        }
 
-.selected-products {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
-    width: 80%;
-    max-width: 600px;
-    font-size: 14px;
-}
+        .selected-products {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            width: 80%;
+            max-width: 600px;
+            font-size: 14px;
+        }
 
-.selected-products ul {
-    list-style-type: none;
-    padding: 0;
-}
+        .selected-products ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-.selected-products li {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f8f9fa;
-    font-size: 14px; 
-}
+        .selected-products li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            font-size: 14px;
+        }
 
-.card-body h3 {
-    color: #28a745;
-    font-size: 18px; 
-}
+        .card-body h3 {
+            color: #28a745;
+            font-size: 18px;
+        }
 
+        .card-body a:hover {
+            color: #0056b3;
+            text-decoration: none;
+        }
 
-.card-body a:hover {
-    color: #0056b3;
-    text-decoration: none;
-}
-.card-body .font-weight-semibold {
-    font-size: 18px;
-}
+        .card-body .font-weight-semibold {
+            font-size: 18px;
+        }
 
-.card-body a {
-    font-size: 14px;
-    font-weight: bold;
-}
+        .card-body a {
+            font-size: 14px;
+            font-weight: bold;
+        }
 
-.card-body p {
-    font-size: 18px;
-    font-weight: bold;
-    font-family: "DM Sans", sans-serif;
-}
+        .card-body p {
+            font-size: 18px;
+            font-weight: bold;
+            font-family: "DM Sans", sans-serif;
+        }
 
-.navbar-brand p {
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
-}
+        .navbar-brand p {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
 
-.navbar-nav {
-    text-align: center;
-}
+        .navbar-nav {
+            text-align: center;
+        }
 
-.navbar-nav .nav-item {
-    margin: 0 10px;
-}
+        .navbar-nav .nav-item {
+            margin: 0 10px;
+        }
 
-.navbar-nav .nav-link {
-    font-size: 18px;
-    color: #fff;
-}
+        .navbar-nav .nav-link {
+            font-size: 18px;
+            color: #fff;
+        }
 
-.navbar-nav .nav-link:hover {
-    color: #ffc107;
-}
+        .navbar-nav .nav-link:hover {
+            color: #ffc107;
+        }
 
-@media (max-width: 768px) {
-    .navbar-collapse {
-        justify-content: flex-start;
-    }
+        @media (max-width: 768px) {
+            .navbar-collapse {
+                justify-content: flex-start;
+            }
 
-    .navbar-nav {
-        flex-direction: column;
-        text-align: center;
-    }
+            .navbar-nav {
+                flex-direction: column;
+                text-align: center;
+            }
 
-    .navbar-nav .nav-item {
-        margin: 10px 0;
-    }
+            .navbar-nav .nav-item {
+                margin: 10px 0;
+            }
+        }
 
+        @media (max-width: 400px) {
+            .total-cost {
+                position: fixed;
+                bottom: 50px;
+                right: 10px;
+            }
+        }
 
+        .custom-alert {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1100;
+            display: none;
+        }
 
-}
+        .custom-success-alert {
+            background-color: #d4edda;
+            color: #155724;
+            border-color: #c3e6cb;
+        }
 
-@media (max-width: 400px) {
-    .total-cost {
-        position: fixed;
-        bottom: 50px;
-        right: 10px;
-    }
-}
+        .custom-danger-alert {
+            background-color: #f8d7da;
+            color: #721c24;
+            border-color: #f5c6cb;
+        }

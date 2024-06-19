@@ -31,7 +31,7 @@
         </div>
     </nav>
     <div class="total-cost" onclick="showSelectedProducts()">
-        <i class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;  $<span id="total-cost">0.00</span>
+        <i class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp; $<span id="total-cost">0.00</span>
     </div>
 
     <div class="container mt-5 mb-5">
@@ -41,7 +41,7 @@
                 <div class="card">
                     <div class="card-body text-center">
                         <div class="card-img-actions">
-                            <img src="{{ product.image.image.url }}" class="card-img img-fluid" alt="">
+                            <img src="{{ product.image_url }}" class="card-img img-fluid" alt="">
                         </div>
                     </div>
                     <div class="card-body bg-light text-center">
@@ -71,6 +71,15 @@
             <!-- Selected products will be dynamically added here -->
         </ul>
         <button type="button" class="btn btn-outline-danger mt-3" onclick="hideSelectedProducts()">Close</button>
+        <button type="button" class="btn btn-outline-success mt-3" onclick="buySelectedProducts()">Buy</button>
+    </div>
+
+    <div class="custom-alert custom-danger-alert" id="custom-alert">
+        Sizda hech qanday tanlangan maxsulot yo'q
+    </div>
+
+    <div class="custom-alert custom-success-alert" id="order-success-alert" style="display: none;">
+        Buyurtmangiz muvaffaqiyatli yuborildi!
     </div>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
