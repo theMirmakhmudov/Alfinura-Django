@@ -13,7 +13,6 @@ class Images(models.Model):
 
 
 class Products(models.Model):
-    product_id = models.IntegerField(null=True)
     image = models.ForeignKey('apps.Images', on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     category = models.CharField(max_length=100)
